@@ -1,9 +1,9 @@
 resource "null_resource" "install_layer_deps" {
   triggers = {
-    "layer_build" = "../layers/joi/nodejs/package.json"
+    "layer_build" = "../backend/layers/joi/nodejs/package.json"
   }
   provisioner "local-exec" {
-    working_dir = "../layers/joi/nodejs"
+    working_dir = "../backend/layers/joi/nodejs"
     command     = "npm install --production"
   }
 }
@@ -11,7 +11,7 @@ resource "null_resource" "install_layer_deps" {
 data "archive_file" "joi_layer" {
   output_path = "files/joi-layer.zip"
   type        = "zip"
-  source_dir  = "../layers/joi"
+  source_dir  = "../backend/layers/joi"
 
   depends_on = [
     null_resource.install_layer_deps
