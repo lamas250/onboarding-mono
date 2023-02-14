@@ -1,0 +1,16 @@
+{
+  "name": "terraform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tf:fmt": "cd terraform; terraform fmt",
+    "tf:init": "cd terraform; terraform init",
+    "tf:plan": "cd terraform; terraform plan",
+    "tf:apply": "yarn build; cd terraform; terraform apply",
+    "tf:destroy": "cd terraform; terraform destroy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

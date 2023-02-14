@@ -1,0 +1,30 @@
+{
+  "name": "onboarding-mono",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "tf:fmt": "turbo run tf:fmt",
+    "tf:init": "turbo run tf:init",
+    "tf:plan": "turbo run tf:plan",
+    "tf:apply": "turbo run tf:apply",
+    "tf:destroy": "turbo run tf:destroy"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "latest"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19"
+}
